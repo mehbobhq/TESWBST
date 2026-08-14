@@ -7,9 +7,7 @@ import {
   FileStack,
   Radar,
   Route,
-  Search,
-  CheckCircle2,
-  HelpCircle,
+  ArrowRight as StepArrow,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -125,10 +123,11 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. Direct Filing Support Section */}
-      <section className="bg-slate-50/50 py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
-            <Reveal>
+      <section className="bg-slate-50/50 py-16 lg:py-24 border-t border-slate-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          {/* Text Header Content */}
+          <Reveal>
+            <div className="max-w-3xl">
               <div className="rounded-lg bg-cyan-50 p-3 text-cyan-600 w-fit mb-4">
                 <FileStack className="h-6 w-6" />
               </div>
@@ -141,34 +140,43 @@ export default function ServicesPage() {
               <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">
                 For clients already on the Compliance Platform, we also handle specific filings and registration updates directly: IRP, IFTA, entity changes, government portal updates, and similar work on a case-by-case basis.
               </p>
-              <p className="mt-3 text-sm text-slate-500 leading-relaxed">
+              <p className="mt-2 text-sm text-slate-500 leading-relaxed">
                 Turnaround times vary depending on the scope and urgency of the work. If you have a deadline, expected timelines are confirmed before engagement begins.
               </p>
-            </Reveal>
+            </div>
+          </Reveal>
 
-            <Reveal delay={120}>
-              <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4">
-                  Filing Workflow Step-by-Step
-                </h3>
-                <ol className="space-y-3">
-                  {filingSteps.map((step, i) => (
-                    <li
-                      key={step}
-                      className="flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/60 p-4"
-                    >
-                      <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-cyan-100 font-mono text-xs font-bold text-cyan-700">
-                        0{i + 1}
-                      </span>
-                      <span className="text-sm font-medium text-slate-800">
-                        {step}
-                      </span>
-                    </li>
-                  ))}
-                </ol>
+          {/* Horizontal Process Card */}
+          <Reveal delay={120}>
+            <div className="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-10 shadow-sm">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-8 text-center sm:text-left">
+                Filing Workflow Step-by-Step
+              </h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-start relative">
+                {filingSteps.map((step, i) => (
+                  <div key={step} className="flex flex-col items-center text-center group relative">
+                    {/* Badge */}
+                    <div className="w-12 h-12 rounded-full bg-cyan-500 text-white font-extrabold text-sm flex items-center justify-center shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform mb-4">
+                      0{i + 1}
+                    </div>
+
+                    {/* Step Title */}
+                    <span className="text-sm font-semibold text-slate-800 max-w-[140px] leading-snug">
+                      {step}
+                    </span>
+
+                    {/* Connecting Arrow for desktop view */}
+                    {i < filingSteps.length - 1 && (
+                      <div className="hidden lg:block absolute top-6 -right-3 -translate-y-1/2 translate-x-1/2 text-slate-300">
+                        <StepArrow className="w-4 h-4" />
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
-            </Reveal>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
