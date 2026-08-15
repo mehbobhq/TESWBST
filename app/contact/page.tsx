@@ -6,15 +6,15 @@ import Link from 'next/link'
 import { Mail, Clock, MapPin, ShieldCheck, Check, Send } from 'lucide-react'
 
 const inquiryTopics = [
-  'CSA/BASIC Scores',
+  'New Authority Setup',
   'Driver Qualification Files',
   'Hours of Service Compliance',
-  'Drug & Alcohol Program Review',
   'Vehicle Maintenance Records',
-  'New Authority Setup',
+  'Permits & Registrations',
   'Renewal',
   'Highway Use Tax Filing',
-  'Permits & Registrations',
+  'CSA/BASIC Scores',
+  'Drug & Alcohol Program Review',
   'Other / Custom Request',
 ]
 
