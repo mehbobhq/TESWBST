@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   CheckCircle2,
   ClipboardCheck,
@@ -73,7 +74,7 @@ const benefits = [
   {
     icon: Headset,
     title: 'Practical ongoing support',
-    body: 'A person to help when a system alone isn\u2019t enough.',
+    body: 'A person to help when a system alone isn’t enough.',
   },
   {
     icon: Settings2,
@@ -149,7 +150,7 @@ const steps = [
     n: '05',
     icon: Headset,
     title: 'Support',
-    body: 'As regulations evolve and your business grows, we remain available to help you navigate what\u2019s next.',
+    body: 'As regulations evolve and your business grows, we remain available to help you navigate what’s next.',
   },
 ]
 
@@ -183,9 +184,9 @@ export function Process() {
               <span className="mt-4 font-mono text-xs font-medium text-muted-foreground">
                 {step.n}
               </span>
-              <h3 className="mt-1 text-base font-semibold text-foreground">
+              <span className="mt-1 text-base font-semibold text-foreground">
                 {step.title}
-              </h3>
+              </span>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {step.body}
               </p>
