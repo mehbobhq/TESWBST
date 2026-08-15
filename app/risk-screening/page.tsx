@@ -53,9 +53,9 @@ const screeningScope = [
 export default function RiskScreeningPage() {
   return (
     <div className="bg-[#f7f4ee] text-[#0c1a36] min-h-screen">
-      {/* Hero Section */}
+      {/* 1. Dark Navy Hero Section */}
       <PageHero
-        variant="light"
+        variant="dark"
         align="center"
         eyebrow="NO COST, NO OBLIGATION"
         title="See your compliance risk before it disrupts your operation."
@@ -63,8 +63,11 @@ export default function RiskScreeningPage() {
         breadcrumb="Risk Screening"
       />
 
-      {/* How a screening works */}
-      <section className="border-b border-[#e2ded3] bg-[#fdfcf9] py-16 sm:py-20">
+      {/* Hairline Divider */}
+      <div className="border-b border-[#e2ded3]" />
+
+      {/* 2. How a screening works Section */}
+      <section className="bg-[#fdfcf9] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -99,7 +102,10 @@ export default function RiskScreeningPage() {
         </div>
       </section>
 
-      {/* Form & Scope Section */}
+      {/* Hairline Divider */}
+      <div className="border-b border-[#e2ded3]" />
+
+      {/* 3. Form & Scope Section */}
       <section className="py-16 sm:py-24 bg-[#f7f4ee]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start">
