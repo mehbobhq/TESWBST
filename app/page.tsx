@@ -1,18 +1,17 @@
 import { Hero } from '@/components/home/hero'
 import { WhyTruckEase } from '@/components/home/why-truckease'
-import { RiskCta } from '@/components/home/risk-cta'
+import { PlatformPreview } from '@/components/home/platform-sections'
+import { Problem } from '@/components/home/value-sections'
 import { Testimonials } from '@/components/home/testimonials'
-// Imports from consolidated section files
-import { PlatformSections } from '@/components/home/platform-sections'
-import { ValueSections } from '@/components/home/value-sections'
+import { RiskCta } from '@/components/home/risk-cta'
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
       <WhyTruckEase />
-      <PlatformSections />
-      <ValueSections />
+      <PlatformPreview />
+      <Problem />
       <Testimonials />
       <RiskCta />
     </main>
