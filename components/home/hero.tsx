@@ -80,7 +80,7 @@ export function Hero() {
             </div>
             <div className="hidden sm:flex items-center gap-8 text-slate-500">
               <span>US &amp; CANADA COVERAGE</span>
-              <span>AUTOMATED AUDIT TRAIL</span>
+              <span>INTEGRATED AUDIT TRAIL</span>
               <span>REAL-TIME COMPLIANCE SIGNALS</span>
             </div>
           </div>
