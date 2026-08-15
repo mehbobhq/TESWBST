@@ -1,5 +1,4 @@
 // app/page.tsx
-
 import { Hero } from '@/components/home/hero'
 import { WhyTruckEase } from '@/components/home/why-truckease'
 import { PlatformPreview } from '@/components/home/platform-sections'
