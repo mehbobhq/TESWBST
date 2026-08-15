@@ -1,4 +1,3 @@
-// components/home/why-truckease.tsx
 import React from 'react'
 import { 
   ShieldCheck, 
