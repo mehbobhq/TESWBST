@@ -1,7 +1,7 @@
 // app/risk-screening/page.tsx
 
 import type { Metadata } from "next"
-import { PageHero } from "@/components/page-hero"
+import Link from "next/link"
 import { RiskScreeningForm } from "@/components/risk-screening-form"
 import { Reveal } from "@/components/reveal"
 import { Card } from "@/components/ui/card"
@@ -53,15 +53,32 @@ const screeningScope = [
 export default function RiskScreeningPage() {
   return (
     <div className="bg-[#f7f4ee] text-[#0c1a36] min-h-screen">
-      {/* 1. Dark Navy Hero Section */}
-      <PageHero
-        variant="dark"
-        align="center"
-        eyebrow="NO COST, NO OBLIGATION"
-        title="See your compliance risk before it disrupts your operation."
-        description="A quick screening surfaces the compliance signals most likely to need attention — so you can act on your timeline, not find out the hard way."
-        breadcrumb="Risk Screening"
-      />
+      {/* 1. Hardcoded Dark Navy Hero Section */}
+      <section className="bg-[#0c1a36] text-white py-16 lg:py-20 text-center relative">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
+          <nav className="mb-4 text-xs font-mono text-slate-400">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span className="mx-2">&gt;</span>
+            <span className="text-slate-200">Risk Screening</span>
+          </nav>
+
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-[#16274a] px-3.5 py-1 text-xs font-mono font-semibold tracking-wider text-slate-300 shadow-sm mb-6 uppercase">
+            NO COST, NO OBLIGATION
+          </div>
+
+          {/* Title */}
+          <h1 className="text-4xl font-serif font-medium tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.15]">
+            See your compliance risk before it disrupts your operation.
+          </h1>
+
+          {/* Description */}
+          <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            A quick screening surfaces the compliance signals most likely to need attention — so you can act on your timeline, not find out the hard way.
+          </p>
+        </div>
+      </section>
 
       {/* Hairline Divider */}
       <div className="border-b border-[#e2ded3]" />
