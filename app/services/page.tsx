@@ -79,8 +79,8 @@ export default function ServicesPage() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-slate-600 text-slate-200 hover:bg-slate-800/60 hover:text-white px-6 py-3 rounded-lg w-full sm:w-auto">
-              <Link href="/platform">
-                Explore the Platform
+              <Link href="/contact">
+                Contact Our Team
               </Link>
             </Button>
           </div>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
               <p className="mt-4 text-[#5b6472] text-sm sm:text-base leading-relaxed">
                 Combining continuous monitoring, intelligent automation, and practical compliance expertise to help you stay ahead of regulatory deadlines.
               </p>
-              <p className="mt-3 text-xs sm:text-sm text-[#5b6472]/80 leading-relaxed italic bg-[#e2ded3]/40 p-3 rounded-lg border border-[#e2ded3] max-w-2xl mx-auto">
+              <p className="mt-4 text-xs sm:text-sm text-[#5b6472] leading-relaxed italic bg-[#e2ded3]/40 p-4 rounded-lg border border-[#e2ded3] max-w-2xl mx-auto text-left sm:text-center">
                 Operational Insights and Decision Support are available only to clients on the ongoing platform, not as a per-service offering — both depend on continuously-tracked data that only builds up over time, so there's nothing for either to work from without an active subscription already in place.
               </p>
             </div>
