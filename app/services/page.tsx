@@ -72,19 +72,30 @@ export default function ServicesPage() {
             Managing regulatory requirements shouldn't distract you from running your business. TruckEase provides a unified compliance platform backed by direct, hands-on support.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="bg-[#e8720c] hover:bg-[#d6670a] text-white font-semibold px-6 py-3 rounded-lg w-full sm:w-auto">
-              <Link href="/risk-screening">
-                Request a Risk Screening <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-slate-600 text-slate-200 hover:bg-slate-800/60 hover:text-white px-6 py-3 rounded-lg w-full sm:w-auto">
-              <Link href="/contact">
-                Contact Our Team
-              </Link>
-            </Button>
-          </div>
-        </div>
+<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+  {/* Primary CTA (Ember Filled) */}
+  <Button
+    asChild
+    size="lg"
+    className="bg-[#e8720c] hover:bg-[#d6670a] text-white font-semibold px-6 py-3 rounded-lg w-full sm:w-auto shadow-sm"
+  >
+    <Link href="/risk-screening">
+      Request a Risk Screening <ArrowRight className="ml-2 h-4 w-4" />
+    </Link>
+  </Button>
+
+  {/* Secondary CTA (Outline White-on-Dark) */}
+  <Button
+    asChild
+    variant="outline"
+    size="lg"
+    className="bg-transparent border border-slate-500/80 text-white hover:bg-slate-800/80 hover:text-white hover:border-slate-400 font-semibold px-6 py-3 rounded-lg w-full sm:w-auto transition-colors"
+  >
+    <Link href="/contact">
+      Contact Our Team
+    </Link>
+  </Button>
+</div>
       </section>
 
       {/* Hairline Divider */}
