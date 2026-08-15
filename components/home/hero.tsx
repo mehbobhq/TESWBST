@@ -1,53 +1,48 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { 
-  ShieldCheck, 
-  FileCheck2, 
-  Eye, 
-  Award, 
-  Headphones 
-} from 'lucide-react'
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white text-slate-900 py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-[#0c1a36] text-white pt-16 pb-20 lg:pt-24 lg:pb-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Top Badge */}
-        <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1 text-xs font-semibold text-slate-600">
-          <span className="h-2 w-2 rounded-full bg-cyan-600" />
-          Operational intelligence platform for the United States and Canada
-        </div>
-
-        <div className="mt-8 grid gap-12 lg:grid-cols-12 lg:items-center">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           {/* Main Text Content */}
           <div className="lg:col-span-6">
-            <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.1]">
-              Compliance Built for{' '}
-              <span className="bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent">
-                Operational Confidence
-              </span>
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-[#16274a] px-3.5 py-1 text-xs font-mono font-semibold tracking-wider text-slate-300 shadow-sm mb-6 uppercase">
+              AI-Powered Compliance Platform
+            </div>
+
+            {/* H1 Headline */}
+            <h1 className="text-4xl font-serif font-medium tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.15]">
+              Compliance Built for Operational Confidence.
             </h1>
 
-            <p className="mt-4 text-lg font-semibold text-slate-800">
+            {/* Thesis Line */}
+            <p className="mt-4 text-base sm:text-lg font-mono font-semibold text-[#e8720c]">
               Compliance isn't the goal. Operational confidence is.
             </p>
 
-            <p className="mt-3 text-base leading-relaxed text-slate-600">
+            {/* Body */}
+            <p className="mt-4 text-base leading-relaxed text-slate-300">
               A compliance platform that combines regulatory expertise with AI-powered
               technology to help trucking companies across the United States and Canada
               understand their compliance position, stay ahead of regulatory requirements,
               and operate with greater confidence.
             </p>
 
+            {/* Actions */}
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold">
+              {/* Primary CTA */}
+              <Button asChild size="lg" className="bg-[#e8720c] hover:bg-[#d6670a] text-white font-semibold rounded-lg shadow-sm">
                 <Link href="/risk-screening">
-                  Request a Risk Screening &rarr;
+                  Request a Risk Screening
                 </Link>
               </Button>
 
-              <Button asChild variant="outline" size="lg" className="border-slate-300 text-slate-700 hover:bg-slate-50">
+              {/* Secondary CTA (Ghost/Outline) */}
+              <Button asChild variant="outline" size="lg" className="border-white/20 bg-transparent text-white hover:border-white/50 hover:bg-white/5 font-semibold rounded-lg">
                 <Link href="/platform">
                   Explore the Platform
                 </Link>
@@ -55,10 +50,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Semi-Truck Visual Container */}
+          {/* Truck Visual Container */}
           <div className="relative lg:col-span-6 flex justify-center items-center">
-            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-100/50 via-slate-100 to-transparent rounded-3xl -rotate-1 scale-95 -z-10" />
-            
             <div className="relative w-full max-w-xl transition-all duration-300 hover:scale-[1.02]">
               <Image
                 src="/hero-truck.png"
@@ -66,34 +59,26 @@ export function Hero() {
                 width={800}
                 height={500}
                 priority
-                className="w-full h-auto object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.15)]"
+                className="w-full h-auto object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.3)]"
               />
             </div>
           </div>
         </div>
 
-        {/* Bottom Feature Badges */}
-        <div className="mt-16 border-t border-slate-100 pt-8">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 text-xs font-semibold text-slate-600">
+        {/* Checkpoint Line Motif */}
+        <div className="mt-16 pt-8 border-t border-slate-800 relative">
+          <div className="flex items-center justify-between text-xs font-mono text-slate-400">
             <div className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-cyan-600 shrink-0" />
-              <span>Continuous Monitoring</span>
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e8720c] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#e8720c]"></span>
+              </span>
+              <span>LIVE CHECKPOINT TRACKING</span>
             </div>
-            <div className="flex items-center gap-2">
-              <FileCheck2 className="h-4 w-4 text-cyan-600 shrink-0" />
-              <span>Organized Records</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Eye className="h-4 w-4 text-cyan-600 shrink-0" />
-              <span>Operational Visibility</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Award className="h-4 w-4 text-cyan-600 shrink-0" />
-              <span>Regulatory Expertise</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Headphones className="h-4 w-4 text-cyan-600 shrink-0" />
-              <span>Practical Human Support</span>
+            <div className="hidden sm:flex items-center gap-8 text-slate-500">
+              <span>US &amp; CANADA COVERAGE</span>
+              <span>AUTOMATED AUDIT TRAIL</span>
+              <span>REAL-TIME COMPLIANCE SIGNALS</span>
             </div>
           </div>
         </div>
