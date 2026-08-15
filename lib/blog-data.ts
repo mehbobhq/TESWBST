@@ -110,47 +110,6 @@ Navigating evolving state-by-state alternative fuel regulations can be complex. 
     `,
   },
   {
-    slug: 'bc-commercial-dashcam-law-fleet-requirements',
-    title: 'British Columbia Commercial Dashcam Mandate: What Fleets Need to Know',
-    excerpt: 'A comprehensive breakdown of British Columbia commercial dashcam rules, video retention requirements, and privacy considerations for cross-border carriers.',
-    category: 'Cross-Border & Provincial',
-    readTime: '4 min read',
-    date: 'July 14, 2026',
-    author: 'TruckEase Legal & Regulatory',
-    image: '/blog/dashcam-highway-truck.png',
-    content: `
-## Canadian Commercial Safety Enhancements
-
-Commercial fleet operators running routes into British Columbia must stay informed regarding provincial equipment and safety regulations. Recent regulatory updates emphasizing driver safety and incident investigation have placed increased focus on commercial vehicle dashcams and forward-facing video technology.
-
-Whether you operate a local fleet or execute cross-border runs from the U.S. into Western Canada, understanding video recording standards is critical to avoiding roadside penalties and liability disputes.
-
----
-
-## Essential Requirements for In-Cab & Forward Cameras
-
-* **Forward-Facing Visibility:** Cameras must be mounted within the windshield wiper sweep zone without obstructing the driver's direct line of sight.
-* **Incident Recording:** Systems must automatically capture and preserve video footage during heavy braking, sudden swerving, or collision events.
-* **Driver Privacy Protections:** Regulations distinguish between forward-facing exterior cameras and interior driver-facing cameras. Audio recording and continuous interior monitoring are subject to strict privacy standards under Canadian privacy legislation.
-
----
-
-## Operational Benefits of Compliant Dashcam Deployment
-
-Beyond meeting regulatory standards, integrating structured video records into your fleet operations provides major advantages:
-
-1. **Exoneration in Crashes:** Clear forward-facing footage protects drivers from false third-party claims and reduces insurance litigation costs.
-2. **Targeted Driver Coaching:** Video highlights allow safety managers to address risky habits before they result in roadside violations or accidents.
-3. **Faster Claims Resolution:** Having verifiable visual records speeds up insurance processing and minimizes vehicle downtime.
-
----
-
-## Integrating Video into Your Compliance Strategy
-
-Hardware is only half the equation. Having organized video event storage that pairs with your driver qualification files and safety records ensures full operational visibility. TruckEase helps carriers maintain organized, compliant safety records across both U.S. and Canadian jurisdictions.
-    `,
-  },
-  {
     slug: 'fmcsa-regulatory-updates-carrier-roadmap',
     title: 'FMCSA Regulatory Updates: A Strategic Compliance Roadmap for Fleets',
     excerpt: 'Key federal regulatory shifts, safety scoring adjustments, and upcoming rulemakings every motor carrier must prepare for this year.',
