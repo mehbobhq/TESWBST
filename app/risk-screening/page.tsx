@@ -56,12 +56,6 @@ export default function RiskScreeningPage() {
       {/* 1. Hardcoded Dark Navy Hero Section */}
       <section className="bg-[#0c1a36] text-white py-16 lg:py-20 text-center relative">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
-          <nav className="mb-4 text-xs font-mono text-slate-400">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="mx-2">&gt;</span>
-            <span className="text-slate-200">Risk Screening</span>
-          </nav>
 
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-[#16274a] px-3.5 py-1 text-xs font-mono font-semibold tracking-wider text-slate-300 shadow-sm mb-6 uppercase">
