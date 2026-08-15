@@ -16,7 +16,10 @@ export function Hero() {
 
             {/* H1 Headline */}
             <h1 className="text-4xl font-serif font-medium tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.15]">
-              Compliance Built for Operational Confidence.
+              Compliance Built for{' '}
+              <span className="!text-cyan-400 font-semibold" style={{ color: '#22d3ee' }}>
+                Operational Confidence.
+              </span>
             </h1>
 
             {/* Thesis Line */}
