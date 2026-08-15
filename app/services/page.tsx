@@ -69,33 +69,31 @@ export default function ServicesPage() {
           </h1>
 
           <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Managing regulatory requirements shouldn't distract you from running your business. TruckEase provides a unified compliance platform backed by direct, hands-on support.
+            Managing regulatory requirements shouldn&apos;t distract you from running your business. TruckEase provides a unified compliance platform backed by direct, hands-on support.
           </p>
 
-<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-  {/* Primary CTA (Ember Filled) */}
-  <Button
-    asChild
-    size="lg"
-    className="bg-[#e8720c] hover:bg-[#d6670a] text-white font-semibold px-6 py-3 rounded-lg w-full sm:w-auto shadow-sm"
-  >
-    <Link href="/risk-screening">
-      Request a Risk Screening <ArrowRight className="ml-2 h-4 w-4" />
-    </Link>
-  </Button>
-
-  {/* Secondary CTA (Outline White-on-Dark) */}
-  <Button
-    asChild
-    variant="outline"
-    size="lg"
-    className="bg-transparent border border-slate-500/80 text-white hover:bg-slate-800/80 hover:text-white hover:border-slate-400 font-semibold px-6 py-3 rounded-lg w-full sm:w-auto transition-colors"
-  >
-    <Link href="/contact">
-      Contact Our Team
-    </Link>
-  </Button>
-</div>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#e8720c] hover:bg-[#d6670a] text-white font-semibold px-6 py-3 rounded-lg w-full sm:w-auto shadow-sm"
+            >
+              <Link href="/risk-screening">
+                Request a Risk Screening <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="bg-transparent border border-slate-500/80 text-white hover:bg-slate-800/80 hover:text-white hover:border-slate-400 font-semibold px-6 py-3 rounded-lg w-full sm:w-auto transition-colors"
+            >
+              <Link href="/contact">
+                Contact Our Team
+              </Link>
+            </Button>
+          </div>
+        </div>
       </section>
 
       {/* Hairline Divider */}
@@ -116,7 +114,7 @@ export default function ServicesPage() {
                 Combining continuous monitoring, intelligent automation, and practical compliance expertise to help you stay ahead of regulatory deadlines.
               </p>
               <p className="mt-4 text-xs sm:text-sm text-[#5b6472] leading-relaxed italic bg-[#e2ded3]/40 p-4 rounded-lg border border-[#e2ded3] max-w-2xl mx-auto text-left sm:text-center">
-                Operational Insights and Decision Support are available only to clients on the ongoing platform, not as a per-service offering — both depend on continuously-tracked data that only builds up over time, so there's nothing for either to work from without an active subscription already in place.
+                Operational Insights and Decision Support are available only to clients on the ongoing platform, not as a per-service offering &mdash; both depend on continuously-tracked data that only builds up over time, so there&apos;s nothing for either to work from without an active subscription already in place.
               </p>
             </div>
           </Reveal>
@@ -170,7 +168,7 @@ export default function ServicesPage() {
                 For clients already on the Compliance Platform, we also handle filings and registration work that falls outside your regular renewal cycle: entity changes, government portal updates, one-off amendments, and similar work, case by case.
               </p>
               <p className="mt-3 text-sm text-[#5b6472]/80 leading-relaxed">
-                Turnaround times vary depending on the scope and urgency of the work. If you have a deadline, we'll confirm expected timelines before the engagement begins.
+                Turnaround times vary depending on the scope and urgency of the work. If you have a deadline, we&apos;ll confirm expected timelines before the engagement begins.
               </p>
             </div>
           </Reveal>
