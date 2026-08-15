@@ -4,109 +4,154 @@ import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { RiskScreeningForm } from "@/components/risk-screening-form"
 import { Reveal } from "@/components/reveal"
-import { ClipboardList, Globe, AlertTriangle, MessagesSquare, Mail } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { 
+  ClipboardList, 
+  Globe, 
+  AlertTriangle, 
+  MessagesSquare, 
+  ShieldCheck, 
+  CheckCircle2 
+} from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Free Risk Screening",
+  title: "Free Risk Screening | TruckEase Solutions",
   description:
-    "Get a no-obligation compliance risk screening from TruckEase Solutions. We review public records and surface your biggest operational exposures.",
+    "A quick screening surfaces the compliance signals most likely to need attention — so you can act on your timeline, not find out the hard way.",
 }
 
 const steps = [
   {
     icon: ClipboardList,
     title: "1. Review requested",
-    body: "Complete a 3-minute self-assessment to highlight where you need clarity, then share basic information about your business to get started.",
+    body: "Complete a brief 5-question assessment to highlight key compliance signals, then provide your fleet details to start the review.",
   },
   {
     icon: Globe,
     title: "2. Public information reviewed",
-    body: "We examine publicly available data to see what regulators, insurance providers, and brokers currently see connected to your business.",
+    body: "We examine publicly available regulatory records, safety databases, and registration histories linked to your business.",
   },
   {
     icon: AlertTriangle,
     title: "3. Potential areas for attention identified",
-    body: "We evaluate your current setup against available records to surface quiet red flags, sudden score shifts, and hidden issues before they turn into costly problems.",
+    body: "We evaluate your records to surface quiet red flags, filing gaps, score movements, and operational inconsistencies.",
   },
   {
     icon: MessagesSquare,
     title: "4. Next steps discussed",
-    body: "We walk you through what needs immediate attention, what can wait, and how our specialized compliance services can take the heavy lifting off your hands.",
+    body: "We share findings and walk you through what needs immediate attention, what can wait, and how to address potential risks.",
   },
+]
+
+const screeningScope = [
+  "Public safety indicators that could attract additional regulatory attention",
+  "Authority and registration issues that may interrupt operations",
+  "Filing gaps and regulatory inconsistencies that deserve attention",
+  "Canadian compliance indicators where applicable",
 ]
 
 export default function RiskScreeningPage() {
   return (
-    <>
-<PageHero
+    <div className="bg-[#f7f4ee] text-[#0c1a36] min-h-screen">
+      {/* Hero Section */}
+      <PageHero
         variant="light"
         align="center"
-        eyebrow="No cost, no obligation"
-        title={
-          <>
-            See your compliance risk before it becomes an{" "}
-            <span className="text-destructive underline decoration-destructive/30 decoration-2 underline-offset-4 font-bold">
-              operational problem.
-            </span>
-          </>
-        }
-        description="A quick screening surfaces the violations, gaps, and score trends most likely to cost you—so you can fix them on your timeline, not an auditor's."
+        eyebrow="NO COST, NO OBLIGATION"
+        title="See your compliance risk before it disrupts your operation."
+        description="A quick screening surfaces the compliance signals most likely to need attention — so you can act on your timeline, not find out the hard way."
         breadcrumb="Risk Screening"
       />
 
-      <section className="border-b border-border bg-background py-16 sm:py-20">
+      {/* How a screening works */}
+      <section className="border-b border-[#e2ded3] bg-[#fdfcf9] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal>
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#5b6472]">
+                THE PROCESS
+              </span>
+              <h2 className="text-3xl font-serif font-medium text-[#0c1a36] sm:text-4xl mt-2">
+                How a screening works
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => (
               <Reveal key={step.title} delay={i * 80}>
-                <div className="flex h-full flex-col rounded-xl border border-border bg-card p-6 shadow-sm">
-                  <div className="flex size-11 items-center justify-center rounded-lg bg-accent/12 text-accent">
-                    <step.icon className="size-5" />
+                <Card className="flex h-full flex-col justify-between border border-[#e2ded3] bg-[#f7f4ee] p-6 shadow-sm rounded-xl">
+                  <div>
+                    <div className="flex size-11 items-center justify-center rounded-lg bg-[#0c1a36] text-white">
+                      <step.icon className="size-5" />
+                    </div>
+                    <h3 className="mt-4 font-serif font-semibold text-[#0c1a36] text-lg">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#5b6472]">
+                      {step.body}
+                    </p>
                   </div>
-                  <h3 className="mt-4 font-semibold text-foreground">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
-                </div>
+                </Card>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-secondary py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:items-start">
-            <Reveal className="lg:sticky lg:top-24">
-              <p className="inline-flex items-center gap-2 rounded-full bg-accent/12 px-3.5 py-1.5 text-xs font-semibold text-accent">
-                <Mail className="size-3.5 shrink-0" />
-                Clear risk breakdown sent to your inbox
+      {/* Form & Scope Section */}
+      <section className="py-16 sm:py-24 bg-[#f7f4ee]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start">
+            
+            {/* Left Column: Context & Scope */}
+            <Reveal className="lg:sticky lg:top-24 space-y-8">
+              <div>
+                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#5b6472]">
+                  START YOUR REVIEW
+                </span>
+                <h2 className="mt-2 text-3xl font-serif font-medium text-[#0c1a36] sm:text-4xl">
+                  Tell us about your fleet
+                </h2>
+                <p className="mt-4 text-[#5b6472] leading-relaxed">
+                  Answer 5 quick assessment questions followed by your basic fleet details to receive your customized findings.
+                </p>
+              </div>
+
+              {/* What your risk screening looks for */}
+              <Card className="border border-[#e2ded3] bg-[#fdfcf9] p-6 sm:p-8 rounded-xl shadow-sm">
+                <div className="flex items-center gap-3 text-[#0c1a36] mb-4">
+                  <ShieldCheck className="size-6 text-[#e8720c] shrink-0" />
+                  <h3 className="font-serif font-semibold text-lg">
+                    What your risk screening looks for:
+                  </h3>
+                </div>
+                <ul className="space-y-3.5">
+                  {screeningScope.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-[#5b6472]">
+                      <CheckCircle2 className="size-4 text-[#e8720c] shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+
+              {/* Compliance Disclaimer */}
+              <p className="text-xs text-[#5b6472] leading-relaxed italic border-l-2 border-[#e2ded3] pl-4 py-1">
+                Disclaimer: This screening reviews publicly available regulatory information only. It is not a guarantee of compliance, an official government rating, or legal advice.
               </p>
-              <h2 className="mt-5 text-3xl font-semibold text-foreground text-balance sm:text-4xl">
-                Tell us about your fleet
-              </h2>
-              <p className="mt-4 max-w-md text-muted-foreground leading-relaxed">
-                The more you share, the sharper your snapshot. Everything you submit stays confidential and is used only
-                to prepare your screening.
-              </p>
-              <ul className="mt-8 space-y-4">
-                {[
-                  "No credit card, no contract, no obligation.",
-                  "Clear, prioritized breakdown of your operational standing.",
-                  "Practical next steps based on what your screening finds.",
-                ].map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-sm text-foreground">
-                    <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-accent" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
             </Reveal>
 
+            {/* Right Column: Multi-screen Interactive Form Component */}
             <Reveal delay={100}>
-              <RiskScreeningForm />
+              <div className="bg-[#fdfcf9] border border-[#e2ded3] rounded-2xl p-6 sm:p-8 shadow-sm">
+                <RiskScreeningForm />
+              </div>
             </Reveal>
+
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
