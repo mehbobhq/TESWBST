@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   AlarmClockOff,
   ArrowRight,
@@ -137,7 +138,7 @@ const features = [
   {
     icon: Radar,
     title: 'Compliance Tracking',
-    body: 'Renewals, licensing, and registrations tracked continuously, including IRP, IFTA, USDOT, MC, NSC, CVOR/SFC, UCR, and state or provincial requirements. Gaps get flagged before they become deadlines you\u2019re racing.',
+    body: 'Renewals, licensing, and registrations tracked continuously, including IRP, IFTA, USDOT, MC, NSC, CVOR/SFC, UCR, and state or provincial requirements. Gaps get flagged before they become deadlines you’re racing.',
   },
   {
     icon: Boxes,
@@ -147,7 +148,7 @@ const features = [
   {
     icon: BrainCircuit,
     title: 'Operational Insights',
-    body: 'An always-on layer that connects what\u2019s happening across your operation and surfaces patterns that are difficult to identify through manual tracking alone.',
+    body: 'An always-on layer that connects what’s happening across your operation and surfaces patterns that are difficult to identify through manual tracking alone.',
   },
   {
     icon: ClipboardList,
