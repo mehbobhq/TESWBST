@@ -24,6 +24,9 @@ export function DashboardPreview() {
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground mt-1">
             Fleet Compliance Operations Dashboard
           </h2>
+          <p className="text-xs text-muted-foreground mt-2 italic">
+            Interface concept. Illustrative data shown for demonstration purposes.
+          </p>
         </div>
 
         {/* Outer Dashboard Card Frame */}
@@ -187,7 +190,7 @@ export function DashboardPreview() {
               </div>
             </div>
 
-            {/* Column 2: Recent Activity */}
+            {/* Column 2: Recent Activity (Sorted Descending by Date) */}
             <div className="bg-[#111726] p-5 rounded-xl border border-slate-800 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
@@ -200,30 +203,30 @@ export function DashboardPreview() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
-                      <span>SCAC Renewal</span>
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                      <span className="truncate">MCS-150 Biannual Update</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-emerald-400 font-semibold">Completed</span>
-                      <span className="text-slate-400">June 10</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
-                      <span>MCS-150 Biannual Update</span>
-                    </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 shrink-0">
                       <span className="text-emerald-400 font-semibold">Completed</span>
                       <span className="text-slate-400">June 19</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
-                      <span>US Bonded Carrier App.</span>
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                      <span className="truncate">SCAC Renewal</span>
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 shrink-0">
+                      <span className="text-emerald-400 font-semibold">Completed</span>
+                      <span className="text-slate-400">June 10</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-slate-300">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                      <span className="truncate">US Bonded Carrier App.</span>
+                    </div>
+                    <div className="flex items-center gap-3 shrink-0">
                       <span className="text-emerald-400 font-semibold">Completed</span>
                       <span className="text-slate-400">June 02</span>
                     </div>
