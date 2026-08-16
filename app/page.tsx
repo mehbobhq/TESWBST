@@ -5,6 +5,7 @@ import { WhyTruckEase } from '@/components/home/why-truckease'
 import { HowWeHelp } from '@/components/home/value-sections'
 import { ProcessSteps } from '@/components/home/process-steps'
 import { Testimonials } from '@/components/home/testimonials'
+import { RiskCta } from '@/components/home/risk-cta'
 
 export default function Home() {
   return (
