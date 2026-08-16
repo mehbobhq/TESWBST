@@ -4,7 +4,7 @@ import { StatsBanner } from '@/components/home/stats-banner'
 import { WhyTruckEase } from '@/components/home/why-truckease'
 import { HowWeHelp } from '@/components/home/value-sections'
 import { ProcessSteps } from '@/components/home/process-steps'
-import { Testimonials } from '@/components/home/testimonials'
+import { TestimonialsSection } from '@/components/home/testimonials'
 import { RiskCta } from '@/components/home/risk-cta'
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <WhyTruckEase />
       <HowWeHelp />
       <ProcessSteps />
-      <Testimonials />
+      <TestimonialsSection />
       <RiskCta />
     </main>
   )
