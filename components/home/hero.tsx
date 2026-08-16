@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, Globe2, Lock, FileCheck, CheckCircle2 } from 'lucide-react'
+import { ShieldCheck, Globe2, Lock, FileCheck, CheckCircle2, Truck } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -69,22 +68,18 @@ export function Hero() {
 
           {/* Right Hero Visual Column */}
           <div className="relative lg:col-span-7 flex justify-center">
-            <div className="relative w-full max-w-2xl">
+            <div className="relative w-full max-w-2xl min-h-[320px] rounded-2xl border border-border bg-gradient-to-br from-card to-muted/50 p-6 shadow-xl flex items-center justify-center">
               
-              {/* Truck Visual with Grounded Drop Shadow */}
-              <div className="relative z-10 drop-shadow-[0_20px_25px_rgba(12,26,54,0.12)]">
-                <Image
-                  src="/hero-truck-light.png"
-                  alt="TruckEase Commercial Fleet Tractor and Trailer"
-                  width={800}
-                  height={450}
-                  priority
-                  className="w-full h-auto object-contain"
-                />
+              {/* Fallback Truck Graphic / Visual Placeholder */}
+              <div className="flex flex-col items-center justify-center py-12 text-center text-muted-foreground">
+                <div className="p-4 bg-navy/10 rounded-2xl mb-3">
+                  <Truck className="h-16 w-16 text-accent" />
+                </div>
+                <span className="text-xs font-mono font-medium">TruckEase Fleet Intelligence Engine</span>
               </div>
               
               {/* Floating UI Card Overlay 1 */}
-              <div className="absolute -top-4 right-8 z-20 bg-card/95 backdrop-blur-sm border border-border p-3 rounded-xl shadow-lg flex items-center gap-3">
+              <div className="absolute top-4 right-4 z-20 bg-card/95 backdrop-blur-sm border border-border p-3 rounded-xl shadow-lg flex items-center gap-3">
                 <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-600 dark:text-emerald-400">
                   <CheckCircle2 className="h-5 w-5" />
                 </div>
@@ -95,7 +90,7 @@ export function Hero() {
               </div>
 
               {/* Floating UI Card Overlay 2 */}
-              <div className="absolute top-20 right-0 z-20 bg-card/95 backdrop-blur-sm border border-border p-3.5 rounded-xl shadow-xl w-48">
+              <div className="absolute bottom-6 left-4 z-20 bg-card/95 backdrop-blur-sm border border-border p-3.5 rounded-xl shadow-xl w-48">
                 <div className="text-[10px] uppercase font-mono font-bold text-muted-foreground">Compliance Position</div>
                 <div className="text-xl font-bold text-foreground mt-0.5">87.4%</div>
                 <div className="text-[11px] font-semibold text-accent mt-0.5">Moderate Risk</div>
