@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ShieldCheck, Globe2, Lock, FileCheck, CheckCircle2, Truck } from 'lucide-react'
+import { ShieldCheck, Globe2, Lock, FileCheck, CheckCircle2 } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -70,10 +70,24 @@ export function Hero() {
           <div className="relative lg:col-span-7 flex justify-center">
             <div className="relative w-full max-w-2xl min-h-[320px] rounded-2xl border border-border bg-gradient-to-br from-card to-muted/50 p-6 shadow-xl flex items-center justify-center">
               
-              {/* Fallback Truck Graphic / Visual Placeholder */}
+              {/* Fallback Truck Graphic / Visual Placeholder with Inline SVG */}
               <div className="flex flex-col items-center justify-center py-12 text-center text-muted-foreground">
                 <div className="p-4 bg-navy/10 rounded-2xl mb-3">
-                  <Truck className="h-16 w-16 text-accent" />
+                  <svg 
+                    className="h-16 w-16 text-accent" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="1.75" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                    <path d="M15 18H9" />
+                    <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                    <circle cx="17" cy="18" r="2" />
+                    <circle cx="7" cy="18" r="2" />
+                  </svg>
                 </div>
                 <span className="text-xs font-mono font-medium">TruckEase Fleet Intelligence Engine</span>
               </div>
