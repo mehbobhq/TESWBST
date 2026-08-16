@@ -12,12 +12,6 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Hero />
       <DashboardPreview />
-      <StatsBanner />
-      <WhyTruckEase />
-      <HowWeHelp />
-      <ProcessSteps />
-      <Testimonials />
-      <RiskCta />
     </main>
   )
 }
