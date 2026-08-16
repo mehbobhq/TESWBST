@@ -13,7 +13,7 @@ const steps = [
 export function RiskCta() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="overflow-hidden rounded-3xl border border-border bg-navy text-navy-foreground">
           <div className="relative grid gap-10 p-8 sm:p-12 lg:grid-cols-2 lg:items-center lg:p-16">
             <div
@@ -25,7 +25,7 @@ export function RiskCta() {
                 <span className="h-px w-6 bg-accent" aria-hidden="true" />
                 Risk Screening
               </span>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              <h2 className="mt-4 text-balance text-3xl font-serif font-medium tracking-tight sm:text-4xl">
                 Understand Your Compliance Position Before Small Issues Become
                 Bigger Problems.
               </h2>
@@ -39,30 +39,26 @@ export function RiskCta() {
               <p className="mt-4 font-medium text-navy-foreground">
                 No obligation. Just a real answer to where you stand.
               </p>
-              <Button asChild size="lg" className="mt-8">
+              <Button asChild size="lg" className="mt-8 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 <Link href="/risk-screening">
                   Request Your Risk Screening
-                  <ArrowRight className="size-4" />
+                  <ArrowRight className="size-4 ml-2" />
                 </Link>
               </Button>
             </Reveal>
 
             <Reveal delay={120} className="relative">
               <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-6 ring-1 ring-inset ring-white/10 sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-wider text-navy-muted">
+                <p className="text-xs font-mono font-semibold uppercase tracking-wider text-navy-muted">
                   How a screening works
                 </p>
                 <ol className="mt-5 space-y-4">
                   {steps.map((step, i) => (
                     <li key={step} className="flex items-center gap-4">
                       <span className="grid size-8 shrink-0 place-items-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
-                        {i < steps.length ? (
-                          <Check className="size-4" />
-                        ) : (
-                          i + 1
-                        )}
+                        <Check className="size-4" />
                       </span>
-                      <span className="text-sm font-medium">{step}</span>
+                      <span className="text-sm font-medium text-navy-foreground">{step}</span>
                     </li>
                   ))}
                 </ol>
