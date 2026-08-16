@@ -12,6 +12,13 @@ import {
 } from 'lucide-react'
 
 export function DashboardPreview() {
+  const highlights = [
+    { label: 'CONTINUOUSLY TRACKED CHECKPOINTS', active: true },
+    { label: 'US & CANADA COVERAGE', active: false },
+    { label: 'INTEGRATED AUDIT TRAIL', active: false },
+    { label: 'REAL-TIME COMPLIANCE SIGNALS', active: false }
+  ]
+
   return (
     <section className="bg-background py-16 border-b border-border font-sans">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -270,6 +277,26 @@ export function DashboardPreview() {
             </p>
           </div>
 
+        </div>
+
+        {/* Feature Highlights Grid Below Dashboard Frame */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 pt-4">
+          {highlights.map((item, index) => (
+            <div key={index} className="flex items-center gap-2.5">
+              <span
+                className={`h-2 w-2 rounded-full shrink-0 ${
+                  item.active ? 'bg-orange-500' : 'bg-slate-400/30'
+                }`}
+              />
+              <span
+                className={`text-[11px] sm:text-xs font-bold tracking-wider uppercase ${
+                  item.active ? 'text-orange-500' : 'text-slate-500'
+                }`}
+              >
+                {item.label}
+              </span>
+            </div>
+          ))}
         </div>
 
       </div>
