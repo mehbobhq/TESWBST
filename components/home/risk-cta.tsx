@@ -53,7 +53,7 @@ export function RiskCta() {
                   How a screening works
                 </p>
                 <ol className="mt-5 space-y-4">
-                  {steps.map((step, i) => (
+                  {steps.map((step) => (
                     <li key={step} className="flex items-center gap-4">
                       <span className="grid size-8 shrink-0 place-items-center rounded-full bg-accent text-sm font-semibold text-accent-foreground">
                         <Check className="size-4" />
