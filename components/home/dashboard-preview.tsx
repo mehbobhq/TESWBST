@@ -80,7 +80,7 @@ export function DashboardPreview() {
             {/* Main Category Status Rows */}
             <div className="lg:col-span-8 space-y-3">
               
-              {/* Hours of Service */}
+              {/* 1. Hours of Service */}
               <div className="bg-[#111726] hover:bg-[#161d30] transition-colors rounded-xl p-3.5 sm:p-4 border border-slate-800 flex items-center justify-between gap-3 text-sm">
                 <div className="flex items-center gap-3 min-w-0">
                   <AlertCircle className="h-5 w-5 text-rose-500 shrink-0" />
@@ -93,7 +93,7 @@ export function DashboardPreview() {
                 </div>
               </div>
 
-              {/* Vehicle Maintenance Record */}
+              {/* 2. Vehicle Maintenance Record */}
               <div className="bg-[#111726] hover:bg-[#161d30] transition-colors rounded-xl p-3.5 sm:p-4 border border-slate-800 flex items-center justify-between gap-3 text-sm">
                 <div className="flex items-center gap-3 min-w-0">
                   <Wrench className="h-5 w-5 text-amber-500 shrink-0" />
@@ -106,7 +106,20 @@ export function DashboardPreview() {
                 </div>
               </div>
 
-              {/* SCAC Renewal */}
+              {/* 3. IRP Fleet Renewal */}
+              <div className="bg-[#111726] hover:bg-[#161d30] transition-colors rounded-xl p-3.5 sm:p-4 border border-slate-800 flex items-center justify-between gap-3 text-sm">
+                <div className="flex items-center gap-3 min-w-0">
+                  <Info className="h-5 w-5 text-cyan-400 shrink-0" />
+                  <span className="font-semibold text-slate-200 truncate">IRP Fleet Renewal</span>
+                </div>
+                <div className="flex items-center gap-4 shrink-0">
+                  <span className="text-xs font-semibold text-cyan-400 hidden sm:inline">On Track</span>
+                  <span className="text-xs font-medium text-slate-400">Application Submitted</span>
+                  <ChevronRight className="h-4 w-4 text-slate-500" />
+                </div>
+              </div>
+
+              {/* 4. SCAC Renewal */}
               <div className="bg-[#111726] hover:bg-[#161d30] transition-colors rounded-xl p-3.5 sm:p-4 border border-slate-800 flex items-center justify-between gap-3 text-sm">
                 <div className="flex items-center gap-3 min-w-0">
                   <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0" />
@@ -119,7 +132,7 @@ export function DashboardPreview() {
                 </div>
               </div>
 
-              {/* MCS-150 Biannual Update */}
+              {/* 5. MCS-150 Biannual Update */}
               <div className="bg-[#111726] hover:bg-[#161d30] transition-colors rounded-xl p-3.5 sm:p-4 border border-slate-800 flex items-center justify-between gap-3 text-sm">
                 <div className="flex items-center gap-3 min-w-0">
                   <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0" />
@@ -128,19 +141,6 @@ export function DashboardPreview() {
                 <div className="flex items-center gap-4 shrink-0">
                   <span className="text-xs font-semibold text-emerald-400 hidden sm:inline">Completed</span>
                   <span className="font-bold text-white">100%</span>
-                  <ChevronRight className="h-4 w-4 text-slate-500" />
-                </div>
-              </div>
-
-              {/* IRP Fleet Renewal */}
-              <div className="bg-[#111726] hover:bg-[#161d30] transition-colors rounded-xl p-3.5 sm:p-4 border border-slate-800 flex items-center justify-between gap-3 text-sm">
-                <div className="flex items-center gap-3 min-w-0">
-                  <Info className="h-5 w-5 text-cyan-400 shrink-0" />
-                  <span className="font-semibold text-slate-200 truncate">IRP Fleet Renewal</span>
-                </div>
-                <div className="flex items-center gap-4 shrink-0">
-                  <span className="text-xs font-semibold text-cyan-400 hidden sm:inline">On Track</span>
-                  <span className="text-xs font-medium text-slate-400">Application Submitted</span>
                   <ChevronRight className="h-4 w-4 text-slate-500" />
                 </div>
               </div>
@@ -167,7 +167,7 @@ export function DashboardPreview() {
                       <span className="h-2 w-2 rounded-full bg-rose-500" />
                       <span>Annual Inspection – Unit T104</span>
                     </div>
-                    <span className="font-bold text-rose-400">11 Days</span>
+                    <span className="font-bold text-rose-400">21 Days</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-slate-300">
@@ -201,21 +201,21 @@ export function DashboardPreview() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-slate-300">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
-                      <span>IRP Renewal</span>
+                      <span>SCAC Renewal</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-emerald-400 font-semibold">Submitted</span>
-                      <span className="text-slate-400">May 12</span>
+                      <span className="text-emerald-400 font-semibold">Completed</span>
+                      <span className="text-slate-400">June 10</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-slate-300">
                       <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
-                      <span>SCAC Renewal</span>
+                      <span>MCS-150 Biannual Update</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-emerald-400 font-semibold">Completed</span>
-                      <span className="text-slate-400">May 10</span>
+                      <span className="text-slate-400">June 19</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
@@ -225,7 +225,7 @@ export function DashboardPreview() {
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-emerald-400 font-semibold">Completed</span>
-                      <span className="text-slate-400">May 06</span>
+                      <span className="text-slate-400">June 02</span>
                     </div>
                   </div>
                 </div>
@@ -243,17 +243,19 @@ export function DashboardPreview() {
                   <button className="text-[11px] font-semibold text-rose-400 hover:text-rose-300">View all</button>
                 </div>
                 <div className="space-y-3">
-                  <div className="flex items-center gap-2 text-rose-300">
-                    <ShieldAlert className="h-3.5 w-3.5 text-rose-500 shrink-0" />
-                    <span className="truncate">2 Driver Files Expiring Soon</span>
+                  <div>
+                    <div className="flex items-center gap-2 text-rose-300">
+                      <ShieldAlert className="h-3.5 w-3.5 text-rose-500 shrink-0" />
+                      <span className="truncate">1 Trailer Inspection Expiring in 4 days</span>
+                    </div>
+                    <p className="text-[10px] text-rose-400/70 pl-5 mt-0.5">Reminders sent 8</p>
                   </div>
-                  <div className="flex items-center gap-2 text-rose-300">
-                    <ShieldAlert className="h-3.5 w-3.5 text-rose-500 shrink-0" />
-                    <span className="truncate">IFTA Filing Overdue (1 Qtr)</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-rose-300">
-                    <ShieldAlert className="h-3.5 w-3.5 text-rose-500 shrink-0" />
-                    <span className="truncate">1 Vehicle Inspection Overdue</span>
+                  <div>
+                    <div className="flex items-center gap-2 text-rose-300">
+                      <ShieldAlert className="h-3.5 w-3.5 text-rose-500 shrink-0" />
+                      <span className="truncate">2 Driver Files Expiring in 12 days</span>
+                    </div>
+                    <p className="text-[10px] text-rose-400/70 pl-5 mt-0.5">Reminders sent 5</p>
                   </div>
                 </div>
               </div>
