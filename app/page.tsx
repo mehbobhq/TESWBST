@@ -1,7 +1,7 @@
 import { Hero } from '@/components/home/hero'
 import { DashboardPreview } from '@/components/home/dashboard-preview'
 import { StatsBanner } from '@/components/home/stats-banner'
-import { ValueProps } from '@/components/home/value-props'
+import { WhyTruckEase as ValueProps } from '@/components/home/why-truckease'
 import { PlatformCapabilities } from '@/components/home/platform-capabilities'
 import { ProcessSteps } from '@/components/home/process-steps'
 import { Testimonials } from '@/components/home/testimonials'
