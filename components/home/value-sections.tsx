@@ -15,8 +15,8 @@ import { Reveal } from '@/components/reveal'
 
 export function Philosophy() {
   return (
-    <section className="bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section className="bg-background border-b border-border">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
             <SectionHeading
@@ -95,8 +95,8 @@ const problems = [
 
 export function Problem() {
   return (
-    <section className="bg-muted/40">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section className="bg-muted/40 border-b border-border">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <Reveal>
           <SectionHeading
             eyebrow="The problem"
@@ -115,7 +115,7 @@ export function Problem() {
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {problems.map((problem, i) => (
             <Reveal key={problem.title} delay={i * 100}>
-              <Card className="h-full border-border bg-card p-6">
+              <Card className="h-full border-border bg-card p-6 shadow-sm">
                 <span className="grid size-11 place-items-center rounded-xl bg-navy text-navy-foreground">
                   <problem.icon className="size-5 text-accent" />
                 </span>
@@ -160,7 +160,7 @@ const features = [
 export function HowWeHelp() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <Reveal>
           <SectionHeading
             eyebrow="How TruckEase helps"
@@ -172,7 +172,7 @@ export function HowWeHelp() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {features.map((feature, i) => (
             <Reveal key={feature.title} delay={(i % 2) * 100}>
-              <Card className="group h-full border-border bg-card p-6 transition-shadow hover:shadow-md sm:p-7">
+              <Card className="group h-full border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md sm:p-7">
                 <div className="flex items-start gap-4">
                   <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-navy text-navy-foreground transition-colors group-hover:bg-navy/90">
                     <feature.icon className="size-5 text-accent" />
