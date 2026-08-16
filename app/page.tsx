@@ -14,6 +14,10 @@ export default function Home() {
       <DashboardPreview />
       <StatsBanner />
       <WhyTruckEase />
+      <HowWeHelp />
+      <ProcessSteps />
+      <Testimonials />
+      <RiskCta />
     </main>
   )
 }
