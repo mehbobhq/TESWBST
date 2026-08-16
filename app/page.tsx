@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Hero />
-      {/* <DashboardPreview /> */}
-      {/* <StatsBanner /> */}
-      {/* <WhyTruckEase /> */}
-      {/* <HowWeHelp /> */}
-      {/* <ProcessSteps /> */}
-      {/* <Testimonials /> */}
-      {/* <RiskCta /> */}
+      <DashboardPreview />
+      <StatsBanner />
+      <WhyTruckEase />
+      <HowWeHelp />
+      <ProcessSteps />
+      <Testimonials />
+      <RiskCta />
     </main>
   )
 }
