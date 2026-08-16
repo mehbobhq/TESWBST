@@ -1,21 +1,23 @@
 import { Hero } from '@/components/home/hero'
-import { PlatformPreview, WhyTruckEase, Process } from '@/components/home/platform-sections'
-import { Problem, HowWeHelp, Philosophy } from '@/components/home/value-sections'
+import { DashboardPreview } from '@/components/home/dashboard-preview'
+import { StatsBanner } from '@/components/home/stats-banner'
+import { ValueProps } from '@/components/home/value-props'
+import { PlatformCapabilities } from '@/components/home/platform-capabilities'
+import { ProcessSteps } from '@/components/home/process-steps'
 import { Testimonials } from '@/components/home/testimonials'
-import { RiskCta } from '@/components/home/risk-cta'
+import { CtaBanner } from '@/components/home/cta-banner'
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-slate-50">
       <Hero />
-      <WhyTruckEase />
-      <PlatformPreview />
-      <Problem />
-      <HowWeHelp />
-      <Process />
-      <Philosophy />
+      <DashboardPreview />
+      <StatsBanner />
+      <ValueProps />
+      <PlatformCapabilities />
+      <ProcessSteps />
       <Testimonials />
-      <RiskCta />
+      <CtaBanner />
     </main>
   )
 }
